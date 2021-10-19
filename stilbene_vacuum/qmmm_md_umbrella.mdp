@@ -1,0 +1,62 @@
+; Run parameters
+integrator  = md
+dt          = 0.001
+tinit       = 0
+nsteps      = 10000    ; 10 ps
+nstcomm     = 1
+; Output parameters
+nstxout     = 1000      ; every 1 ps
+nstvout     = 1000
+nstfout     = 1000
+nstlog      = 1
+nstxtcout   = 1       ; every 1 fs
+nstenergy   = 1
+nstcalcenergy = 1
+
+energygrps      = System        ; Which energy group(s) to write to disk
+
+rlist           = 1.0           ; Short-range neighborlist cut-off distance [nm]
+rcoulomb        = 1.0           ; Long range coulomb cut-off distance [nm]
+rvdw            = 1.0           ; Long range vdw cut-off distance [nm]
+
+cutoff-scheme   = Verlet
+nstlist         = 1            ; Freq, to update neighbour list
+pbc             = xyz          ; With periodic boundary conditions
+
+tcoupl                   = v-rescale ;Temperature coupling options
+nsttcouple               = 1
+tc-grps                  = System
+tau-t                    = 0.5
+ref-t                    = 300
+
+
+; GENERATE VELOCITIES FOR STARTUP RUN
+gen-vel                  = yes
+gen-temp                 = 300 
+gen-seed                 = -1
+
+; Pull code
+pull                    = yes
+pull_ncoords            = 1         ; only one reaction coordinate
+pull_ngroups            = 4         ; four groups defining one reaction coordinate
+pull_group1_name        = group1
+pull_group2_name        = group2
+pull_group3_name        = group3
+pull_group4_name        = group4
+pull_coord1_type        = umbrella  ; harmonic potential
+pull_coord1_geometry    = dihedral
+pull_coord1_dim         = Y Y Y
+pull_coord1_groups      = 1 2 2 3 3 4
+pull-coord1-init	= @umbr@
+pull_coord1_rate        = 0.00       ; restrain in place
+pull_coord1_k           = 418.4      ; kJ mol^-1 nm^-2
+pull-nstxout             = 1
+pull-nstfout             = 1
+
+; CP2K QMMM parameters
+
+qmmm-cp2k-active              = true
+qmmm-cp2k-qmgroup             = QMatoms
+qmmm-cp2k-qmmethod            = PBE
+qmmm-cp2k-qmcharge            = 0
+qmmm-cp2k-qmmultiplicity      = 1

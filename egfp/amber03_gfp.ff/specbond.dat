@@ -1,0 +1,13 @@
+12
+CYS	SG	1	CYS	SG	1	0.2	CYS2	CYS2
+CYS	SG	1	HEME	FE	2	0.25	CYS2	HEME
+CYS	SG	1	HEME	CAB	1	0.18	CYS2	HEME
+CYS	SG	1	HEME	CAC	1	0.18	CYS2	HEME
+HID	NE2	1	HEME	FE	1	0.21	HID	HEME
+MET	SD	1	HEME	FE	1	0.23	MET	HEME
+CYM     SG      1       CYM     SG      1       0.25    CYS2    CYS2
+HID	NE2	1	BCL	MG	1	0.25	HID	BCL
+HID	NE2	1	FE	FE	1	0.23	HID	FE
+GLU     OE1     1       FE      FE      1       0.25    GLU     FE
+GLU     OE2     1       FE      FE      1       0.25    GLU     FE
+CYS2    SG      1       PCB     CBC     1       0.16    CYS2    PCB

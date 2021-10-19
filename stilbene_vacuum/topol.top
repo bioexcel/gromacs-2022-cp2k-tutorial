@@ -1,0 +1,293 @@
+;
+;	File 'topol.top' was generated
+;	By user: vamodi (237567)
+;	On host: nano1603-d01.nano.jyu.fi
+;	At date: Fri Aug  7 15:35:51 2020
+;
+;	This is a standalone topology file
+;
+;	Created by:
+;	                    :-) GROMACS - gmx pdb2gmx, 2018.8 (-:
+;	
+;	Executable:   /home/vamodi/.local/gromacs-2018.8/bin/gmx
+;	Data prefix:  /home/vamodi/.local/gromacs-2018.8
+;	Working dir:  /home/vamodi/stilbene
+;	Command line:
+;	  gmx pdb2gmx -f tsb.pdb -water tip3p
+;	Force field was read from current directory or a relative path - path added.
+;
+
+; Include forcefield parameters
+#include "./amber14sb_OL15.ff/forcefield.itp"
+
+[ moleculetype ]
+; Name            nrexcl
+Other               3
+
+[ atoms ]
+;   nr       type  resnr residue  atom   cgnr     charge       mass  typeB    chargeB      massB
+; residue   1 TSB rtp TSB  q  0.0
+     1         CA      1    TSB     C1      1  -0.160748      12.01   ; qtot -0.1607
+     2         HA      1    TSB     H1      2   0.141301      1.008   ; qtot -0.01945
+     3         CA      1    TSB     C2      3  -0.124552      12.01   ; qtot -0.144
+     4         HA      1    TSB     H2      4   0.139211      1.008   ; qtot -0.004788
+     5         CA      1    TSB     C3      5  -0.219924      12.01   ; qtot -0.2247
+     6         HA      1    TSB     H3      6   0.145831      1.008   ; qtot -0.07888
+     7         CA      1    TSB     C4      7   0.220167      12.01   ; qtot 0.1413
+     8         CA      1    TSB     C5      8  -0.219924      12.01   ; qtot -0.07864
+     9         HA      1    TSB     H5      9   0.145831      1.008   ; qtot 0.06719
+    10         CA      1    TSB     C6     10  -0.124552      12.01   ; qtot -0.05736
+    11         HA      1    TSB     H6     11   0.139211      1.008   ; qtot 0.08185
+    12         CM      1    TSB     C7     12  -0.236993      12.01   ; qtot -0.1551
+    13         HA      1    TSB     H7     13   0.155142      1.008   ; qtot 9.984e-07
+    14         CM      1    TSB     C8     14  -0.236993      12.01   ; qtot -0.237
+    15         HA      1    TSB     H8     15   0.155142      1.008   ; qtot -0.08185
+    16         CA      1    TSB     C9     16   0.220167      12.01   ; qtot 0.1383
+    17         CA      1    TSB    C10     17  -0.219924      12.01   ; qtot -0.08161
+    18         HA      1    TSB    H10     18   0.145831      1.008   ; qtot 0.06422
+    19         CA      1    TSB    C11     19  -0.124552      12.01   ; qtot -0.06033
+    20         HA      1    TSB    H11     20   0.139211      1.008   ; qtot 0.07888
+    21         CA      1    TSB    C12     21  -0.160748      12.01   ; qtot -0.08187
+    22         HA      1    TSB    H12     22   0.141301      1.008   ; qtot 0.05944
+    23         CA      1    TSB    C13     23  -0.124552      12.01   ; qtot -0.06512
+    24         HA      1    TSB    H13     24   0.139211      1.008   ; qtot 0.07409
+    25         CA      1    TSB    C14     25  -0.219924      12.01   ; qtot -0.1458
+    26         HA      1    TSB    H14     26   0.145831      1.008   ; qtot 1.997e-06
+
+[ bonds ]
+;  ai    aj funct            c0            c1            c2            c3
+    1     2     1 
+    1     3     1 
+    1    10     1 
+    3     4     1 
+    3     5     1 
+    5     6     1 
+    5     7     1 
+    7     8     1 
+    7    12     1 
+    8     9     1 
+    8    10     1 
+   10    11     1 
+   12    13     1 
+   12    14     1 
+   14    15     1 
+   14    16     1 
+   16    17     1 
+   16    25     1 
+   17    18     1 
+   17    19     1 
+   19    20     1 
+   19    21     1 
+   21    22     1 
+   21    23     1 
+   23    24     1 
+   23    25     1 
+   25    26     1 
+
+[ pairs ]
+;  ai    aj funct            c0            c1            c2            c3
+    1     6     1 
+    1     7     1 
+    1     9     1 
+    2     4     1 
+    2     5     1 
+    2     8     1 
+    2    11     1 
+    3     8     1 
+    3    11     1 
+    3    12     1 
+    4     6     1 
+    4     7     1 
+    4    10     1 
+    5     9     1 
+    5    10     1 
+    5    13     1 
+    5    14     1 
+    6     8     1 
+    6    12     1 
+    7    11     1 
+    7    15     1 
+    7    16     1 
+    8    13     1 
+    8    14     1 
+    9    11     1 
+    9    12     1 
+   10    12     1 
+   12    17     1 
+   12    25     1 
+   13    15     1 
+   13    16     1 
+   14    18     1 
+   14    19     1 
+   14    23     1 
+   14    26     1 
+   15    17     1 
+   15    25     1 
+   16    20     1 
+   16    21     1 
+   16    24     1 
+   17    22     1 
+   17    23     1 
+   17    26     1 
+   18    20     1 
+   18    21     1 
+   18    25     1 
+   19    24     1 
+   19    25     1 
+   20    22     1 
+   20    23     1 
+   21    26     1 
+   22    24     1 
+   22    25     1 
+   24    26     1 
+
+[ angles ]
+;  ai    aj    ak funct            c0            c1            c2            c3
+    2     1     3     1 
+    2     1    10     1 
+    3     1    10     1 
+    1     3     4     1 
+    1     3     5     1 
+    4     3     5     1 
+    3     5     6     1 
+    3     5     7     1 
+    6     5     7     1 
+    5     7     8     1 
+    5     7    12     1 
+    8     7    12     1 
+    7     8     9     1 
+    7     8    10     1 
+    9     8    10     1 
+    1    10     8     1 
+    1    10    11     1 
+    8    10    11     1 
+    7    12    13     1 
+    7    12    14     1 126.127     527.184
+   13    12    14     1 
+   12    14    15     1 
+   12    14    16     1 126.127     527.184
+   15    14    16     1 
+   14    16    17     1 
+   14    16    25     1 
+   17    16    25     1 
+   16    17    18     1 
+   16    17    19     1 
+   18    17    19     1 
+   17    19    20     1 
+   17    19    21     1 
+   20    19    21     1 
+   19    21    22     1 
+   19    21    23     1 
+   22    21    23     1 
+   21    23    24     1 
+   21    23    25     1 
+   24    23    25     1 
+   16    25    23     1 
+   16    25    26     1 
+   23    25    26     1 
+
+[ dihedrals ]
+;  ai    aj    ak    al funct            c0            c1            c2            c3            c4            c5
+    2     1     3     4     9 
+    2     1     3     5     9 
+   10     1     3     4     9 
+   10     1     3     5     9 
+    2     1    10     8     9 
+    2     1    10    11     9 
+    3     1    10     8     9 
+    3     1    10    11     9 
+    1     3     5     6     9 
+    1     3     5     7     9 
+    4     3     5     6     9 
+    4     3     5     7     9 
+    3     5     7     8     9 
+    3     5     7    12     9 
+    6     5     7     8     9 
+    6     5     7    12     9 
+    5     7     8     9     9 
+    5     7     8    10     9 
+   12     7     8     9     9 
+   12     7     8    10     9 
+    5     7    12    13     9 
+    5     7    12    14     9 
+    8     7    12    13     9 
+    8     7    12    14     9 
+    7     8    10     1     9 
+    7     8    10    11     9 
+    9     8    10     1     9 
+    9     8    10    11     9 
+    7    12    14    15     9 
+    7    12    14    16     9 
+   13    12    14    15     9 
+   13    12    14    16     9 
+   12    14    16    17     9 
+   12    14    16    25     9 
+   15    14    16    17     9 
+   15    14    16    25     9 
+   14    16    17    18     9 
+   14    16    17    19     9 
+   25    16    17    18     9 
+   25    16    17    19     9 
+   14    16    25    23     9 
+   14    16    25    26     9 
+   17    16    25    23     9 
+   17    16    25    26     9 
+   16    17    19    20     9 
+   16    17    19    21     9 
+   18    17    19    20     9 
+   18    17    19    21     9 
+   17    19    21    22     9 
+   17    19    21    23     9 
+   20    19    21    22     9 
+   20    19    21    23     9 
+   19    21    23    24     9 
+   19    21    23    25     9 
+   22    21    23    24     9 
+   22    21    23    25     9 
+   21    23    25    16     9 
+   21    23    25    26     9 
+   24    23    25    16     9 
+   24    23    25    26     9 
+
+[ dihedrals ]
+;  ai    aj    ak    al funct            c0            c1            c2            c3
+    2     1    10     3     4 
+    4     3     1     5     4 
+    6     5     3     7     4 
+    7    10     8     9     4 
+    7    14    12    13     4 
+    8     1    10    11     4 
+    8     5     7    12     4 
+   14    16    25    17     4 
+   15    14    12    16     4 
+   16    19    17    18     4 
+   16    23    25    26     4 
+   17    21    19    20     4 
+   19    23    21    22     4 
+   21    25    23    24     4 
+
+; Include Position restraint file
+#ifdef POSRES
+#include "posre.itp"
+#endif
+
+; Include water topology
+#include "./amber14sb_OL15.ff/tip3p.itp"
+
+#ifdef POSRES_WATER
+; Position restraint for each water oxygen
+[ position_restraints ]
+;  i funct       fcx        fcy        fcz
+   1    1       1000       1000       1000
+#endif
+
+; Include topology for ions
+#include "./amber14sb_OL15.ff/ions.itp"
+
+[ system ]
+; Name
+Protein
+
+[ molecules ]
+; Compound        #mols
+Other               1

@@ -1,0 +1,23 @@
+; em.mdp - used as input into grompp to generate nma-em.tpr
+integrator	= steep ; Algorithm (steep = steepest descent minimization)
+emtol		= 10.0  ; Stop minimization when the maximum force < 10.0 kJ/mol/nm
+emstep          = 0.01  ; Energy step size
+nsteps		= 100   ; Maximum number of (minimization) steps to perform
+
+; Set output frequency to each step
+nstxout                  = 1 ; Coordinates to trr
+nstlog                   = 1 ; Energies to md.log
+nstcalcenergy            = 1 ; Energies to ener.edr
+nstenergy                = 1 ; Energies to ener.edr
+
+; Set cut-offs
+rlist               = 0.2 ; NB-search cut-off
+rcoulomb	    = 0.2 ; Short-range electrostatic cut-off
+rvdw		    = 0.2 ; Short-range Van der Waals cut-off
+
+; CP2K QMMM parameters
+qmmm-cp2k-active              = true   ; Activate QMMM MdModule
+qmmm-cp2k-qmgroup             = System ; Index group of QM atoms
+qmmm-cp2k-qmmethod            = PBE    ; Method to use
+qmmm-cp2k-qmcharge            = 0      ; Charge of QM system
+qmmm-cp2k-qmmultiplicity      = 1      ; Multiplicity of QM system
